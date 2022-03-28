@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<main>
+			<div>
+				<button style="background-color: #969; padding: 8px 12px">Click</button>
+			</div>
+		</main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+			const body = `
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+  <title>Rimac EECC</title>
+  <style type="text/css">
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      font-size: 14px;
+    }
+
+    #MessageViewBody a {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    u+#body a {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    .ReadMsgBody {
+      width: 100%;
+    }
+
+    .ExternalClass {
+      width: 100%;
+    }
+
+    .ExternalClass,
+    .ExternalClass div,
+    .ExternalClass font,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass td {
+      line-height: 100%;
+    }
+
+    .yshortcuts a {
+      border-bottom: none !important;
+    }
+
+    .vb-outer {
+      min-width: 0 !important;
+    }
+
+    .ExternalClass,
+    .RMsgBdy {
+      width: 100%;
+      background-color: #3f3f3f;
+    }
+
+    [o365] button {
+      margin: 0 !important;
+    }
+
+    table {
+      mso-table-rspace: 0;
+      mso-table-lspace: 0;
+    }
+
+    #outlook a {
+      padding: 0;
+    }
+
+    a {
+      border: 0 !important;
+      text-decoration: none !important;
+    }
+
+    img {
+      outline: 0;
+      text-decoration: none;
+      border: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    a img {
+      border: none;
+    }
+
+    .ii a[href] {
+      color: #111 !important;
+    }
+
+    p {
+      margin: 0 !important;
+    }
+
+    .pt-0{
+      padding-top: 0 !important;
+    }
+    .pt-1{
+      padding-top: 2px !important;
+    }
+    .pt-2{
+      padding-top: 4px !important;
+    }
+    .pt-3{
+      padding-top: 8px !important;
+    }
+    .pt-4{
+      padding-top: 16px !important;
+    }
+    .pt-5{
+      padding-top: 24px !important;
+    }
+    .pb-0{
+      padding-bottom: 0 !important;
+    }
+    .pb-1{
+      padding-bottom: 2px !important;
+    }
+    .pb-2{
+      padding-bottom: 4px !important;
+    }
+    .pb-3{
+      padding-bottom: 8px !important;
+    }
+    .pb-4{
+      padding-bottom: 16px !important;
+    }
+    .pb-5{
+      padding-bottom: 24px !important;
+    }
+    .pl-0{
+      padding-left: 0 !important;
+    }
+    .pl-1{
+      padding-left: 2px !important;
+    }
+    .pl-2{
+      padding-left: 4px !important;
+    }
+    .pl-3{
+      padding-left: 8px !important;
+    }
+    .pl-4{
+      padding-left: 16px !important;
+    }
+    .pl-5{
+      padding-left: 24px !important;
+    }
+    .pr-0{
+      padding-right: 0 !important;
+    }
+    .pr-1{
+      padding-right: 2px !important;
+    }
+    .pr-2{
+      padding-right: 4px !important;
+    }
+    .pr-3{
+      padding-right: 8px !important;
+    }
+    .pr-4{
+      padding-right: 16px !important;
+    }
+    .pr-5{
+      padding-right: 24px !important;
+    }
+    
+    
+    .title-table{
+      font-family: Arial;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 0.6px;
+      text-align: left;
+      color: #141938;
+      text-transform: uppercase;
+    }
+    .text-table{
+      font-family: Arial;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      text-align: left;
+      color: #141938;
+    }
+    .subtitle-table{
+      font-family: Arial;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 0.8px;
+      text-align: left;
+      color: #676F8F;
+      text-transform: uppercase;
+    }
+
+    .text-left-t1{
+      width: 200px;
+      text-align: left;
+      display: inline-block;
+    }
+    .text-right-t1{
+      width: 340px;
+      text-align: right;
+      display: inline-block;
+    }
+
+    .text-left-t2{
+      width: 560px;
+      text-align: left;
+      display: inline-block;
+    }
+    .text-right-t2{
+      width: 554px;
+      text-align: right;
+      display: inline-block;
+    }
+
+    .bg-title-table{
+      background: #D7DBF5;
+    }
+
+    .bg-odd-table{
+      background: #EDEFFC;
+    }
+  </style>
+</head>
+
+<body id="body" marginwidth="0" marginheight="0" style="background-color: #fff;">
+  <!--[if (mso)|(mso 16)]><style type="text/css">a {text-decoration: none;}</style><![endif]-->
+  <!--[if (gte mso 9)|(IE)]>
+    <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td>
+                <![endif]-->
+  <table border="0" cellspacing="0" cellpadding="0"
+    style="margin: auto; width: 100%; max-width: 100%; border-collapse: collapse">
+    <tbody>
+      <tr>
+        <td>
+          <table border="0" align="center" cellspacing="0" cellpadding="0"
+            style="margin: auto; width: 100%; max-width: 1120px; border-collapse: collapse;">
+            <tr id="1">
+              <td>
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
+                  style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="padding-top: 84px; vertical-align: top;">
+                        <img width="192" height="auto" src="img/logo-rimac.png" style="border: 0; display: block; font-size: 14px;" alt="Rimac">
+                      </td>
+                      <td align="right" style="padding-top: 80px; padding-bottom: 24px;">
+                        <div style="font-family: Arial;">
+                          <p style="font-size: 20px; font-weight: 400; line-height: 28px; color: #494F66;">Estado de cuenta Octubre 2021 | PLAN VIDA FLEXIBLE - U0023551</p>
+                          <p style="font-size: 16px; font-weight: 400; line-height: 28px; color: #494F66;" class="pt-2">Periodo del 01/10/2021 al 31/10/2021</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" style="height: 1px; width: 100%; background: #C5CBE0;"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr id="2">
+              <td>
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"
+                  style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="padding-top: 48px;">
+                        <table width="544px" align="left" border="0" cellspacing="0" cellpadding="0" style="width: 544px;">
+                          <tbody>
+                            <tr>
+                              <td class="bg-title-table pt-3 pb-3" style="padding-left: 11px;">
+                                <p class="title-table">DATOS DE CLIENTE</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="height: 24px;"></td>
+                            </tr>
+                            <tr>
+                              <td class="bg-odd-table pt-2 pb-2">
+                                <p class="text-table text-left-t1"><span class="pl-4">Asegurado</span></p>
+                                <p class="text-table text-right-t1"><span class="pr-4">Raquel Ahinoam Moreno Martos</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pt-2 pb-2">
+                                <p class="text-table text-left-t1"><span class="pl-4">Doc. Cliente</span></p>
+                                <p class="text-table text-right-t1"><span class="pr-4">DNI - 47627926</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="bg-odd-table pt-2 pb-2">
+                                <p class="text-table text-left-t1"><span class="pl-4">Dirección</span></p>
+                                <p class="text-table text-right-t1"><span class="pr-4">Jr.Justo Naveda 433</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pt-2 pb-2">
+                                <p class="text-table text-left-t1"><span class="pl-4">Dist./Prov</span></p>
+                                <p class="text-table text-right-t1"><span class="pr-4">Lima - San Juan de Miraflores</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="bg-odd-table pt-2 pb-2">
+                                <p class="text-table text-left-t1"><span class="pl-4">Departam.</span></p>
+                                <p class="text-table text-right-t1"><span class="pr-4">Lima</span></p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="544px" align="right" border="0" cellspacing="0" cellpadding="0" style="width: 544px;">
+                          <tbody>
+                            <tr>
+                              <td class="bg-title-table pt-3 pb-3" style="padding-left: 11px;">
+                                <p class="title-table">DATOS DE PÓLIZA</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="height: 24px;"></td>
+                            </tr>
+                            <tr>
+                              <td class="bg-odd-table pt-2 pb-2">
+                                <p class="text-table text-left-t1"><span class="pl-4">Vigencia</span></p>
+                                <p class="text-table text-right-t1"><span class="pr-4">Del 14/12/2018 al 14/12/2050</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pt-2 pb-2">
+                                <p class="text-table text-left-t1"><span class="pl-4">Prima convenida</span></p>
+                                <p class="text-table text-right-t1"><span class="pr-4">S/ 378.61</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="bg-odd-table pt-2 pb-2">
+                                <p class="text-table text-left-t1"><span class="pl-4">Producto</span></p>
+                                <p class="text-table text-right-t1"><span class="pr-4">Nuevo VFP</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pt-2 pb-2">
+                                <p class="text-table text-left-t1"><span class="pl-4">Frecuencia de Pago</span></p>
+                                <p class="text-table text-right-t1"><span class="pr-4">Mensual</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="bg-odd-table pt-2 pb-2">
+                                <p class="text-table text-left-t1"><span class="pl-4">Intermediario - Asesor</span></p>
+                                <p class="text-table text-right-t1"><span class="pr-4">Sergio Espinoza Castro</span></p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr id="3">
+              <td>
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="padding-top: 48px;">
+                        <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                          <tbody>
+                            <tr>
+                              <td class="bg-title-table pt-3 pb-3" style="padding-left: 11px;">
+                                <p class="title-table">Coberturas contratadas del seguro de vida</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pt-5 pb-4">
+                                <p class="subtitle-table text-left-t2"><span class="pl-4">Cobertura asegurado titular</span></p>
+                                <p class="subtitle-table text-right-t2"><span class="pr-4">capital asegurado</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="bg-odd-table pt-2 pb-2">
+                                <p class="text-table text-left-t2"><span class="pl-4">Fallecimiento</span></p>
+                                <p class="text-table text-right-t2"><span class="pr-4">S/350,000.00</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pt-2 pb-2">
+                                <p class="text-table text-left-t2"><span class="pl-4">Invalidez total y permanente</span></p>
+                                <p class="text-table text-right-t2"><span class="pr-4">S/200,000.00</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="bg-odd-table pt-2 pb-2">
+                                <p class="text-table text-left-t2"><span class="pl-4">Asistencia de sepelio</span></p>
+                                <p class="text-table text-right-t2"><span class="pr-4">S/10,000.00 </span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pt-5 pb-4">
+                                <p class="subtitle-table text-left-t2"><span class="pl-4">Cobertura PADRES</span></p>
+                                <p class="subtitle-table text-right-t2"><span class="pr-4">capital asegurado</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="bg-odd-table pt-2 pb-2">
+                                <p class="text-table text-left-t2"><span class="pl-4">Asistencia de sepelio</span></p>
+                                <p class="text-table text-right-t2"><span class="pr-4">S/10,000.00</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pt-2 pb-2">
+                                <p class="text-table text-left-t2"><span class="pl-4">Asistencia de sepelio</span></p>
+                                <p class="text-table text-right-t2"><span class="pr-4">S/10,000.00</span></p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr id="3">
+              <td>
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="padding-top: 48px;">
+                        <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                          <tbody>
+                            <tr>
+                              <td class="bg-title-table pt-3 pb-3" style="padding-left: 11px;">
+                                <p class="title-table">Resumen del periodo</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="pt-5">
+                                <p class="text-table text-left-t2"><span class="pl-4">Fallecimiento</span></p>
+                                <p class="text-table text-right-t2"><span class="pr-4">S/350,000.00</span></p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</body>
+
+</html>
+`
+
+      const API_URL = 'http://localhost:3002/api/v1'
+      async function getPDF() {
+        const data = {
+          htmlContent: body,
+          opts: { format: 'A4', scale: .6, printBackground: true,}
+        }
+        // console.log(JSON.stringify(data))
+        // fetch(`${API_URL}/makepdf`, {
+        //   method: 'POST',
+        //   body: JSON.stringify(data),
+        // }).then(res => {
+        //   return res
+        //     .arrayBuffer()
+        //     .then(res => {
+        //       const blob = new Blob([res], { type: 'application/pdf' })
+        //   saveAs(blob, 'invoice.pdf')
+        // })
+        // }).catch(e => alert(e))
+        // return await response.arrayBuffer()
+        return axios.post(`${API_URL}/makepdf`, {
+          responseType: 'arraybuffer',
+          headers: {
+            'Accept': 'application/pdf'
+          },
+          body: data
+        })
+      }
+
+      function savePDF() {
+          return getPDF() // API call
+            .then((res) => {
+              console.log(res)
+              const linkSource = `data:application/pdf;base64,${res.data}`;
+              saveAs(linkSource, 'invoice.pdf')
+              // const downloadLink = document.createElement("a");
+              // const fileName = "abc.pdf";
+              // downloadLink.href = linkSource;
+              // downloadLink.download = fileName;
+              // downloadLink.click();
+            })
+            .catch(err => console.log(err))
+        }
+
+        savePDF()
+		</script>
+	</body>
+</html>
